@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name = 'Car';
+    $age = 32;
+    return view('welcome', compact('name','age'));
 });
 
 Route::get('about', function() {

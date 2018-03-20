@@ -5,6 +5,7 @@
     <title>Test</title>
 </head>
 <body>
-    Hello world
+    Hello, <?= $name; ?> who is <?= $age ?>
+
 </body>
 </html>
