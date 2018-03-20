@@ -14,7 +14,12 @@
 Route::get('/', function () {
     $name = 'Car';
     $age = 32;
-    return view('welcome', compact('name','age'));
+    $tasks = [
+        'Do your shit',
+        'Clear the cache',
+        'install composer'
+    ];
+    return view('welcome', compact('name','age', 'tasks'));
 });
 
 Route::get('about', function() {
