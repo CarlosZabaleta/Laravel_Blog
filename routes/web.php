@@ -11,15 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    $name = 'Car';
-    $age = 32;
-    $tasks = [
-        'Do your shit',
-        'Clear the cache',
-        'install composer'
-    ];
-    return view('welcome', compact('name','age', 'tasks'));
+Route::get('/tasks/', function () {
+    $name = 'Carlos';
+    $age = 25;
+    $tasks = DB::table('task')->orderby('created_at')->get();
+
+    // To create JSON for an API
+    // return $tasks;
+    return view('tasks.index', compact('id','name','age','tasks'));
+});
+
+Route::get('/tasks/{task}', function($id) {
+    $task= DB::table('task')->find($id);
+    return view('tasks.show', compact('task'));
 });
 
 Route::get('about', function() {
