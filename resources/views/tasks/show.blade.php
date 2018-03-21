@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>Tasks</title>
 </head>
-<body>
-    <ul>
-        <il> {{ $task -> body}} </il>
-    </ul>
+<body>    
+        <h1> 
+            <a href="/tasks/">
+                {{$tasks->body}}
+            </a> 
+        </h1>
 </body>
 </html>
