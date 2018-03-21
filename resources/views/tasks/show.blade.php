@@ -7,7 +7,7 @@
 <body>    
         <h1> 
             <a href="/tasks/">
-                {{$tasks->body}}
+                {{$task->body}}
             </a> 
         </h1>
 </body>
