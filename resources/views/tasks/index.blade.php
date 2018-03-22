@@ -21,14 +21,5 @@
     @endforeach
     </ul>
     
-    {{-- <ul>
-
-        <li> {{ $tasks->body }} </li>
-         @foreach ($tasks as $task)
-        <ul>
-            <li> Do it by {{ $task -> created_at}} </li>
-        </ul>
-        @endforeach
-    </ul> --}}
 </body>
 </html>
